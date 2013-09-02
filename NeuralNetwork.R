@@ -12,7 +12,7 @@
 # ================================================================================= #
 library(nnet)
 
-setwd("C:/Users/Ferran/FerranAMazaira/Goligencia")
+# setwd("C:/Users/Ferran/FerranAMazaira/Goligencia")
 data.learn = read.csv("taula.csv", header = TRUE, sep = ";")
 
 # Data formating

@@ -1,3 +1,4 @@
+import re
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.selector import HtmlXPathSelector
@@ -43,12 +44,11 @@ class MatchSpider(CrawlSpider):
     )   
 
 
-
     def parse_item(self, response):
         self.log('Hi, this is an item page! %s' % response.url)
 
         hxs = HtmlXPathSelector(response)
-        temporada = hxs.select('//small/text()').extract()[0][10:17]
+        # temporada = hxs.select('//small/text()').extract()[0][10:17]
 
         l = XPathItemLoader(item=MatchItem(), response=response)
     
@@ -59,36 +59,37 @@ class MatchSpider(CrawlSpider):
         l.add_xpath('result1','//h4[@class="res-local"]/text()')
         l.add_xpath('result2','//h4[@class="res-visitante"]/text()')
         
-        l.add_xpath('posesion1','/descendant::td[@class="local"][1]/text()')
-        l.add_xpath('rematesPuerta1','/descendant::td[@class="local"][2]/span/text()')
-        l.add_xpath('rematesPuerta2','/descendant::td[@class="visitante"][2]/span/text()')
-
-        if temporada in ['2009-10','2010-11','2011-12','2012-13']:
-            l.add_xpath('rematesEntreTresPalos1', '/descendant::td[@class="local"][3]/span/text()') #statistic introduced in 2009-10
-            l.add_xpath('rematesEntreTresPalos2', '/descendant::td[@class="visitante"][3]/span/text()') #statistic introduced in 2009-10
-            l.add_xpath('corners1','/descendant::td[@class="local"][4]/span/text()')
-            l.add_xpath('corners2','/descendant::td[@class="visitante"][4]/span/text()')
-            l.add_xpath('intervencionesPortero1','/descendant::td[@class="local"][5]/span/text()')
-            l.add_xpath('intervencionesPortero2','/descendant::td[@class="visitante"][5]/span/text()')
-            l.add_xpath('balonesPerdidos1','/descendant::td[@class="local"][6]/span/text()')
-            l.add_xpath('balonesPerdidos2','/descendant::td[@class="visitante"][6]/span/text()')
-            l.add_xpath('balonesRecuperados1','/descendant::td[@class="local"][7]/span/text()')
-            l.add_xpath('balonesRecuperados2','/descendant::td[@class="visitante"][7]/span/text()')
-            l.add_xpath('faltasCometidas1','/descendant::td[@class="local"][8]/span/text()')
-            l.add_xpath('faltasCometidas2','/descendant::td[@class="visitante"][8]/span/text()')
-        else:
-            l.add_value('rematesEntreTresPalos1','na')
-            l.add_value('rematesEntreTresPalos2','na')
-            l.add_xpath('corners1','/descendant::td[@class="local"][3]/span/text()')
-            l.add_xpath('corners2','/descendant::td[@class="visitante"][3]/span/text()')
-            l.add_xpath('intervencionesPortero1','/descendant::td[@class="local"][4]/span/text()')
-            l.add_xpath('intervencionesPortero2','/descendant::td[@class="visitante"][4]/span/text()')
-            l.add_xpath('balonesPerdidos1','/descendant::td[@class="local"][5]/span/text()')
-            l.add_xpath('balonesPerdidos2','/descendant::td[@class="visitante"][5]/span/text()')
-            l.add_xpath('balonesRecuperados1','/descendant::td[@class="local"][6]/span/text()')
-            l.add_xpath('balonesRecuperados2','/descendant::td[@class="visitante"][6]/span/text()')
-            l.add_xpath('faltasCometidas1','/descendant::td[@class="local"][7]/span/text()')
-            l.add_xpath('faltasCometidas2','/descendant::td[@class="visitante"][7]/span/text()')
+        for i in range(1,9):
+            try:
+                title = hxs.select('/descendant::th['+str(i)+']/text()').extract()[0]
+            except IndexError:
+                print('just 7 sections')
+            else:
+                title = hxs.select('/descendant::th['+str(i)+']/text()').extract()[0]
+                title = re.sub(' \(\d+\)','',title) #clean the numbers at the end
+                if title == u'Posesi\xf3n':
+                    l.add_xpath('posesion1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                elif title == u'Remates a puerta':
+                    l.add_xpath('rematesPuerta1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('rematesPuerta2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')
+                elif title == u'Remates entre los 3 palos':
+                    l.add_xpath('rematesEntreTresPalos1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('rematesEntreTresPalos2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')   
+                elif title == u'Corners':
+                    l.add_xpath('corners1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('corners2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')    
+                elif title == u'Intervenciones portero':
+                    l.add_xpath('intervencionesPortero1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('intervencionesPortero2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')    
+                elif title == u'Balones perdidos':
+                    l.add_xpath('balonesPerdidos1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('balonesPerdidos2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')
+                elif title == u'Balones recuperados':
+                    l.add_xpath('balonesRecuperados1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('balonesRecuperados2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')
+                elif title == u'Faltas cometidas':
+                    l.add_xpath('faltasCometidas1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('faltasCometidas2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')
         
         l.add_xpath('faltasSancionadas1','/descendant::dd[2]/text()')
         l.add_xpath('faltasSancionadas2','/descendant::dd[3]/text()')

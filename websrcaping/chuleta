@@ -2,7 +2,8 @@
 http://doc.scrapy.org/en/latest/intro/tutorial.html
 
 #Get the scrapy shell
-scrapy shell http://www.dmoz.org/Computers/Programming/Languages/Python/Books/
+scrapy shell http://www.marca.com/estadisticas/futbol/primera/2012_13/jornada_8/sevilla_mallorca/
+
 
 #Run the scrapper and save the data with output format set
 scrapy crawl <spider_name> -o ../data/scraped_data.json -t json
