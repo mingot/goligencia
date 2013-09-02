@@ -1,0 +1,521 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rema",
+				"rematesEntreTresPalos1"
+			],
+			[
+				"tar",
+				"targetasRojas"
+			],
+			[
+				"balon",
+				"balonesRecuperados"
+			],
+			[
+				"new",
+				"new_user"
+			],
+			[
+				"User",
+				"UserenaSignupInline"
+			],
+			[
+				"MyP",
+				"MyProfileInline"
+			],
+			[
+				"user",
+				"userena"
+			],
+			[
+				"pa",
+				"path"
+			],
+			[
+				"Htt",
+				"HttpResponse"
+			],
+			[
+				"HttpResp",
+				"HttpResponseRedirect"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"comme",
+				"comment_list"
+			],
+			[
+				"render",
+				"render_to_response"
+			],
+			[
+				"to",
+				"to_string"
+			],
+			[
+				"blog",
+				"blog_list"
+			],
+			[
+				"Blo",
+				"BlogAdmin"
+			],
+			[
+				"au",
+				"auto_now"
+			],
+			[
+				"ma",
+				"max_length"
+			],
+			[
+				"M",
+				"Model_full	Model (full)"
+			],
+			[
+				"aut",
+				"auto_now_add"
+			],
+			[
+				"nex",
+				"nextLine"
+			],
+			[
+				"New",
+				"NewMessages"
+			],
+			[
+				"chat",
+				"chatwindow"
+			],
+			[
+				"path",
+				"path_coca"
+			],
+			[
+				"get",
+				"get_queryset"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"todo",
+				"Show TODOs: Open files only"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"stack",
+				"Stackoverflow: Search from Input"
+			],
+			[
+				"git commit",
+				"Set Syntax: Git Commit Message"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"show",
+				"Show TODOs: Open files only"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"stak",
+				"Stackoverflow: Search from Input"
+			],
+			[
+				"paca",
+				"Package Control: Remove Package"
+			],
+			[
+				"palc",
+				"Package Control: Install Package"
+			],
+			[
+				"stac",
+				"Stackoverflow: Search Selection"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git:",
+				"Git: Commit history"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mingot/Projectes/2013 - Soccer Data/marca/marca/items.py",
+		"/Users/mingot/Projectes/2013 - Soccer Data/marca/scrapy.cfg",
+		"/Users/mingot/Projectes/2013 - Soccer Data/chuleta",
+		"/Users/mingot/Projectes/2013 - Soccer Data/marca/marca/spiders/match_spider.py",
+		"/Users/mingot/Projectes/2013 - Soccer Data/marca/marca/spiders/classification_table_spider.py",
+		"/Users/mingot/Projectes/2013 - Soccer Data/marca/marca_scrapy.sublime-project",
+		"/Users/mingot/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/mingot/Projectes/2013 - Soccer Data/marca/marca/spiders/marca_spider.py",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/accounts/forms.py",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/signup_form.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/profile_detail.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/signup_complete.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/signin_form.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/base.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/profile_form.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/password_reset_form.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/password_form.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/userena/email_form.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/templates/index.html",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/accounts/admin.py",
+		"/Users/mingot/virtualenvs/template_users_bootstrap/lib/python2.7/site-packages/userena/urls.py",
+		"/Users/mingot/Projectes/django/template_users_bootstrap/template_users_bootstrap/settings.py",
+		"/Users/mingot/virtualenvs/template_users_bootstrap/lib/python2.7/site-packages/userena/templates/userena/signup_form.html",
+		"/Users/mingot/virtualenvs/template_users_bootstrap/lib/python2.7/site-packages/userena/utils.py",
+		"/Users/mingot/virtualenvs/template_users_bootstrap/lib/python2.7/site-packages/userena/admin.py",
+		"/Users/mingot/virtualenvs/template_users_bootstrap/lib/python2.7/site-packages/django/contrib/auth/admin.py",
+		"/Users/mingot/Projectes/django/myblog/myblog/settings.py",
+		"/Users/mingot/Projectes/django/myblog/myblog/templates/blog/base.html",
+		"/Users/mingot/Projectes/django/myblog/myblog/templates/blog/list.html",
+		"/Users/mingot/Projectes/django/myblog/myblog/templates/blog/detail.html",
+		"/Users/mingot/Projectes/django/myblog/myblog/templates/blog/search.html",
+		"/Users/mingot/Projectes/django/myblog/myblog/templates/reg/logout.html",
+		"/Users/mingot/Projectes/django/myblog/reg/urls.py",
+		"/Users/mingot/Projectes/django/myblog/myblog/templates/reg/login.html",
+		"/Users/mingot/Projectes/django/myblog/reg/views.py",
+		"/Users/mingot/Projectes/django/myblog/blog/views.py",
+		"/Users/mingot/Projectes/django/myblog/myblog/templates/blog/editcomment.html",
+		"/Users/mingot/Projectes/django/myblog/blog/urls.py",
+		"/Users/mingot/Projectes/django/myblog/myblog/urls.py",
+		"/Users/mingot/Desktop/views.py",
+		"/Users/mingot/Projectes/django/myblog/blog/models.py",
+		"/Users/mingot/Projectes/django/myblog/blog/admin.py",
+		"/Users/mingot/Projectes/django/myblog/myblog/admin.py",
+		"/Users/mingot/Desktop/java/Calculator.java",
+		"/Users/mingot/Desktop/java/HelloWorldApp.java",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/jqchat.js",
+		"/Users/mingot/Projectes/django/chat_android/simpchat/urls.py",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/views.py",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/models.py",
+		"/Users/mingot/Projectes/django/chat_android/simpchat/admin.py",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/static/jqchat/jqchat.js",
+		"/Users/mingot/Projectes/django/chat_android/chat_android/settings.py",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/urls.py",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/templates/jqchat/chat_test.html",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/templates/jqchat/chat_payload.json",
+		"/Users/mingot/Projectes/django/chat_android/chat_android/urls.py",
+		"/Users/mingot/Projectes/django/chat_android/jqchat/templates/admin/jqchat/room/change_form.html",
+		"/Users/mingot/Projectes/django/memolingus/memolingus/urls.py",
+		"/Users/mingot/Projectes/django/memolingus/parsapp/dictionary.py",
+		"/Users/mingot/Projectes/django/memolingus/memolingus/settings.py",
+		"/Users/mingot/Projectes/django/memolingus/parsapp/templates/words_form.html",
+		"/Users/mingot/Projectes/django/memolingus/parsapp/dump.py",
+		"/Users/mingot/Projectes/django/memolingus/parsapp/text2html.py",
+		"/home/mingot/Projectes/django/memolingus/memolingus/templates/site_base.html",
+		"/home/mingot/Projectes/django/memolingus/memolingus/urls.py",
+		"/home/mingot/Projectes/django/chuleta",
+		"/home/mingot/Projectes/django/memolingus/parsapp/templatetags/word_filters.py",
+		"/home/mingot/Projectes/django/memolingus/parsapp/templates/words_form.html",
+		"/home/mingot/Projectes/django/memolingus/parsapp/forms.py",
+		"/home/mingot/Projectes/django/memolingus/parsapp/templatetags/__init__.py",
+		"/home/mingot/Projectes/django/memolingus/parsapp/dump.py",
+		"/home/mingot/Projectes/django/memolingus/parsapp/dictionary.py",
+		"/home/mingot/Projectes/django/memolingus/parsapp/proves.py",
+		"/home/mingot/Projectes/django/memolingus/parsapp/templates/parse_form.html",
+		"/home/mingot/.config/sublime-text-2/Packages/GoToDoc/Default (Linux).sublime-keymap",
+		"/home/mingot/Projectes/django/memolingus/parsapp/templates/learn_form.html",
+		"/home/mingot/Projectes/django/memolingus/parsapp/populate.py",
+		"/home/mingot/Projectes/django/memolingus/memolingus/templates/_account_bar.html",
+		"/home/mingot/Projectes/django/memolingus/parsapp/models.py",
+		"/home/mingot/Projectes/django/memolingus/memolingus/settings.py",
+		"/home/mingot/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mingot/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mingot/Projectes/django/memolingus/parsapp/views.py",
+		"/home/mingot/Projectes/django/memolingus/memolingus/templates/homepage.html",
+		"/home/mingot/Projectes/django/memolingus/parsapp/templates/show_words.html",
+		"/home/mingot/Projectes/django/memolingus/memolingus/templates/_footer.html",
+		"/home/mingot/Envs/memolingus/lib/python2.6/site-packages/pinax_theme_bootstrap/templates/theme_bootstrap/base.html",
+		"/home/mingot/Envs/memolingus/lib/python2.6/site-packages/pinax_theme_bootstrap/templates/theme_bootstrap/subnav_base.html",
+		"/home/mingot/Envs/memolingus/lib/python2.6/site-packages/pinax_theme_bootstrap/templates/theme_bootstrap/less_base.html",
+		"/home/mingot/Envs/memolingus/lib/python2.6/site-packages/pinax_theme_bootstrap/templates/theme_bootstrap/banner_base.html",
+		"/home/mingot/Projectes/django/prova_pinax/prova_pinax/settings.py",
+		"/home/mingot/Projectes/django/prova_pinax/parsapp/templates/parse_form.html",
+		"/home/mingot/Projectes/django/prova_pinax/parsapp/templates/learn_form.html",
+		"/home/mingot/Projectes/django/prova_pinax/parsapp/templates/congrats.html",
+		"/home/mingot/Projectes/django/mysite/proves.html",
+		"/home/mingot/Projectes/django/mysite/jquery.html",
+		"/home/mingot/Projectes/django/mysite/jquery.js",
+		"/home/mingot/Projectes/django/mysite/chuleta",
+		"/home/mingot/Projectes/django/mysite/mysite/views.py",
+		"/home/mingot/Projectes/django/mysite/books/admin.py",
+		"/home/mingot/Projectes/django/mysite/mysite/templates/current_datetime.html",
+		"/home/mingot/Projectes/django/mysite/books/views.py",
+		"/home/mingot/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
+		"/home/mingot/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/mingot/Projectes/django/mysite/mysite/templates/meta.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"render",
+			"span9",
+			"personal info",
+			"Personal Info",
+			"Personla Infor",
+			"get_profile_model",
+			"Image",
+			"image",
+			"get_profile",
+			"auth",
+			"login",
+			"loggin",
+			"room_join",
+			"timestamp",
+			"prCall",
+			"ramon",
+			"links",
+			"link",
+			"optwrap",
+			"_html",
+			"wrapwrite",
+			"feed",
+			"_html",
+			"sys",
+			"html2text",
+			"encod",
+			"encoding",
+			"learn",
+			")\n",
+			"false",
+			"ctrl+shift+/",
+			"user.",
+			"list_detail",
+			"site",
+			"package control"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"vie",
+				"books/views.py"
+			],
+			[
+				"v",
+				"mysite/views.py"
+			],
+			[
+				"hu",
+				"chuleta"
+			],
+			[
+				"myste/tem",
+				"mysite/templates/current_datetime.html"
+			],
+			[
+				"",
+				"chuleta"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/mingot/Projectes/django/memolingus/memolingus.sublime-project"
+			],
+			[
+				"prova_p",
+				"/home/mingot/Projectes/django/mysite/mysite/prova_pinax.sublime-project"
+			],
+			[
+				"her",
+				"/home/mingot/Projectes/django/memolingus/parsapp/heroku_app.sublime-project"
+			],
+			[
+				"heroku",
+				"/home/mingot/Projectes/django/blackboard/blackboard.sublime-project"
+			],
+			[
+				"llengua",
+				"/home/mingot/Projectes/django/llengua/llegnua.sublime-project"
+			],
+			[
+				"llen",
+				"/home/mingot/Projectes/django/llengua/llegnua.sublime-project"
+			],
+			[
+				"lle",
+				"/home/mingot/Projectes/django/llengua/llegnua.sublime-project"
+			],
+			[
+				"my",
+				"/home/mingot/Projectes/django/mysite/mysite.sublime-project"
+			],
+			[
+				"ll",
+				"/home/mingot/Projectes/django/llengua/llegnua.sublime-project"
+			],
+			[
+				"lleng",
+				"/home/mingot/Projectes/django/llengua/llegnua.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true
+}

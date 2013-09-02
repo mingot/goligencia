@@ -1,0 +1,26 @@
+#page tutorial
+http://doc.scrapy.org/en/latest/intro/tutorial.html
+
+#Get the scrapy shell
+scrapy shell http://www.dmoz.org/Computers/Programming/Languages/Python/Books/
+
+#Run the scrapper and save the data with output format set
+scrapy crawl <spider_name> -o data/scraped_data.json -t json
+scrapy crawl <spider_name> -o data/scraped_data.csv -t csv
+
+* select(): returns a list of selectors, each of them representing the nodes selected by the xpath expression given as argument.
+* extract(): returns a unicode string with
+the data selected by the XPath selector.
+* re(): returns a list of unicode strings extracted by applying the regular expression given as argument.
+
+* /html/head/title: selects the <title> element, inside the <head> element of a HTML document
+* /html/head/title/text(): selects the text inside the aforementioned <title> element.
+* //td: selects all the <td> elements
+* //div[@class="mine"]: selects all div elements which contain an attribute class="mine"
+* //ul/li/a/@href: get the url of the link 
+
+****************************************************************************
+#ITEM LOADERS
+Used to manage the input and output processors to process the extracted data.
+
+Both input and output processors must receive an iterator as their first argument. The output of those functions can be anything. The result of input processors will be appended to an internal list (in the Loader) containing the collected values (for that field). The result of the output processors is the value that will be finally assigned to the item.
