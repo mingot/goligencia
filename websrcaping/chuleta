@@ -5,8 +5,8 @@ http://doc.scrapy.org/en/latest/intro/tutorial.html
 scrapy shell http://www.dmoz.org/Computers/Programming/Languages/Python/Books/
 
 #Run the scrapper and save the data with output format set
-scrapy crawl <spider_name> -o data/scraped_data.json -t json
-scrapy crawl <spider_name> -o data/scraped_data.csv -t csv
+scrapy crawl <spider_name> -o ../data/scraped_data.json -t json
+scrapy crawl <spider_name> -o ../data/scraped_data.csv -t csv
 
 * select(): returns a list of selectors, each of them representing the nodes selected by the xpath expression given as argument.
 * extract(): returns a unicode string with
