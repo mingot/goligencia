@@ -26,6 +26,7 @@ class MatchItem(Item):
 	result1 = Field()
 	result2 = Field()
 	posesion1 = Field()
+	posesion2 = Field()
 	
 	rematesPuerta1 = Field()
 	rematesPuerta2 = Field()

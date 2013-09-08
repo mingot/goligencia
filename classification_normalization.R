@@ -1,6 +1,7 @@
 
 NormalizeClassification <- function(classificationDF){
   # Normalizes the data from classification.csv per each day
+  # The values of pp, gf, points, gc, pg, pe, pj are divided by the maximum of each day
   #
   # Args:
   #   classificationDF: the data frame from classification.csv

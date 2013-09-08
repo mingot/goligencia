@@ -68,7 +68,8 @@ class MatchSpider(CrawlSpider):
                 title = hxs.select('/descendant::th['+str(i)+']/text()').extract()[0]
                 title = re.sub(' \(\d+\)','',title) #clean the numbers at the end
                 if title == u'Posesi\xf3n':
-                    l.add_xpath('posesion1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
+                    l.add_xpath('posesion1', '/descendant::td[@class="local"]['+str(i)+']/text()')
+                    l.add_xpath('posesion2', '/descendant::td[@class="visitante"]['+str(i)+']/text()')
                 elif title == u'Remates a puerta':
                     l.add_xpath('rematesPuerta1', '/descendant::td[@class="local"]['+str(i)+']/span/text()')
                     l.add_xpath('rematesPuerta2', '/descendant::td[@class="visitante"]['+str(i)+']/span/text()')
