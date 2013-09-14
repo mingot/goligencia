@@ -21,14 +21,13 @@ classificationDF = FeaturesClassification(classificationDF)
 # Normalize
 classificationDF = NormalizeClassification(classificationDF)
 
-
-
-
 # Join tables
 tablon = JoinTables(classificationDF, matchDF)
-
+tablon = FeaturesTaula(tablon)
 # Extract match features
 
 # Train and cross validate
 TrainCrossValidation(5, tablon, 'result')
+
+
 

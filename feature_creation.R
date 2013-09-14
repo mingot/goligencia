@@ -29,7 +29,15 @@ FeaturesClassification <- function(classificationDF){
         classificationDF$rp[i] = classificationDF$rp[i-1] + 1
   }
   
-  return(classificationDF)
-    
+  return(classificationDF)    
 }
 
+FeaturesTaula <- function(taula){
+  # Creates new features using classificationDF. Namely:
+  # difpos := position difference btwn team1 and team2
+  # difpoints := dif btwn points1 and points2
+  taula['difpos'] = taula['position1']-taula['position2']
+  taula['difpoints'] = taula['points1'] - taula['points2']
+  
+  return(taula)  
+}
