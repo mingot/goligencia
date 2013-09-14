@@ -25,8 +25,9 @@ NormalizeClassification <- function(classificationDF){
   classificationDF = merge(x=classificationDF, y=dayValues, all.x=TRUE)
   
   for(name in selectedNames)
-    classificationDF[,name] = classificationDF[,name]/classificationDF[,paste(name,'total',sep='')]
-  
+    # when normalizing, we ensure there is at least on pe, pp, pg, etc.
+    classificationDF[,name] = classificationDF[,name]/max(1,classificationDF[,paste(name,'total',sep='')])
+     
   classificationDF = subset(classificationDF, select = originalNames)
   
   return(classificationDF)

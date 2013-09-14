@@ -5,8 +5,8 @@ source('classification_normalization.R')
 source('join_tables.R')
 source('cross_validation.R')
 
-classificationDF = read.csv("data/classification.csv", header = TRUE, sep=',')
-matchDF = read.csv("data/match.csv", header=TRUE, sep=',')
+classificationDF = read.csv("data/classification.csv", header = TRUE, sep=',', fileEncoding = "UTF-8")
+matchDF = read.csv("data/match.csv", header=TRUE, sep=',',fileEncoding = "UTF-8")
 matchDF = matchDF[c('team1', 'team2', 'season','day', 'result1','result2')]
 
 # Clean
@@ -15,6 +15,10 @@ matchDF = CleanMatchDF(matchDF)
 
 # Normalize
 classificationDF = NormalizeClassification(classificationDF)
+
+# Feature creation 
+classificationDF = FeaturesClassification(classificationDF)
+
 
 # Join tables
 tablon = JoinTables(classificationDF, matchDF)
