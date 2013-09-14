@@ -14,7 +14,7 @@ NormalizeClassification <- function(classificationDF){
 
   originalNames = names(classificationDF)
   selectedNames = names(classificationDF)
-  selectedNames = selectedNames[!(selectedNames %in% c('name', 'season', 'day', 'position'))]
+  selectedNames = selectedNames[!(selectedNames %in% c('name', 'season', 'day', 'position','rg','rp','barmad'))]
   query = ''
   for(name in selectedNames)
     query = paste(query, ', sum(',name,') as ',name,'total', sep="")
