@@ -14,7 +14,7 @@ NormalizeClassification <- function(classificationDF){
 
   originalNames = names(classificationDF)
   selectedNames = names(classificationDF)
-  selectedNames = selectedNames[!(selectedNames %in% c('name', 'season', 'day', 'position'))]
+  selectedNames = selectedNames[!(selectedNames %in% c('name', 'season', 'day', 'position','rg','rp','barmad'))]
   query = ''
   for(name in selectedNames)
     query = paste(query, ', sum(',name,') as ',name,'total', sep="")
@@ -25,8 +25,9 @@ NormalizeClassification <- function(classificationDF){
   classificationDF = merge(x=classificationDF, y=dayValues, all.x=TRUE)
   
   for(name in selectedNames)
-    classificationDF[,name] = classificationDF[,name]/classificationDF[,paste(name,'total',sep='')]
-  
+    # when normalizing, we ensure there is at least on pe, pp, pg, etc.
+    classificationDF[,name] = classificationDF[,name]/max(1,classificationDF[,paste(name,'total',sep='')])
+     
   classificationDF = subset(classificationDF, select = originalNames)
   
   return(classificationDF)

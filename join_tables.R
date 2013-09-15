@@ -4,8 +4,6 @@ JoinTables <- function(classificationDF, matchDF){
   tablon = merge(x=matchDF, y=classificationDF, by.x=c('team1','season','day'), by.y=c('name','season','day'), all.x = TRUE)
   tablon = merge(x=tablon, y=classificationDF, by.x=c('team2','season','day'), by.y=c('name','season','day'), all.x = TRUE)
   
-  tablon[sample(nrow(tablon),4),]
-  
   # put the Quiniela result: 0 tied, 1 local team wins, 2 visiting team
   tablon$result = 0
   for(i in 1:nrow(tablon)){
