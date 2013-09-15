@@ -16,11 +16,32 @@ for(name in names(matchDF))
 match1 = matchDF[, selectedVariables1]
 match2 = matchDF[, selectedVariables2]
 
-newNames = c()
+newNames1 = c()
 for(name in names(match1))
-  newNames = c(newNames, substr(name,1,nchar(name)-1)) 
+  newNames1 = c(newNames1, substr(name,1,nchar(name)-1))
+  
+newNames2 = c()
+for(name in names(match2))
+  newNames2 = c(newNames2, substr(name,1,nchar(name)-1))
 
-# add possession to the second team
+names(match1) = newNames1
+names(match2) = newNames2
 
-names(match1) = newNames
-names(match2) = newNames
+#Adding day and season
+match1$day = matchDF$day
+match1$season = matchDF$season
+match2$day = matchDF$day
+match2$season = matchDF$season
+
+#Joining together
+match = rbind(match1, match2)
+
+############# Accumulated statistics until the day #################
+source('data_cleaning.R')
+match$day = TransformDayToNumbers(match$day)
+match$posesion = TransformPercentageToNumber(match$posesion)
+
+AcumulatedUntilDate <- function (season, day, team){
+  aux = match[, match$season==season & match$day <= day & match$team == team]
+  aux = sqldf('select sum(*) from aux')
+}
