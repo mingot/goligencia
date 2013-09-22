@@ -22,8 +22,6 @@ classificationDF = FeaturesClassification(classificationDF)
 classificationDF = NormalizeClassification(classificationDF)
 
 
-
-
 # Join tables
 tablon = JoinTables(classificationDF, matchDF)
 
