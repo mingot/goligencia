@@ -14,30 +14,35 @@ for(name in names(matchDF))
   }
 
 match1 = matchDF[, c(selectedVariables1, "day", "season")]
-match2 = matchDF[, c(selectedVariables2, "day", "season")]
+match1 = matchDF[, selectedVariables1]
+match2 = matchDF[, selectedVariables2]
 
 newNames1 = c()
 for(name in names(match1))
-  if(!(name %in% c("day", "season"))){
-    newNames1 = c(newNames1, substr(name,1,nchar(name)-1))
-  }else{
-    newNames1 = c(newNames1,name)
-  }
+  newNames1 = c(newNames1, substr(name,1,nchar(name)-1))
 
 newNames2 = c()
 for(name in names(match2))
-  if(!(name %in% c("day", "season"))){
-    newNames2 = c(newNames2, substr(name,1,nchar(name)-1))
-  }else{
-    newNames2 = c(newNames2,name)
-  }
-
+  newNames2 = c(newNames2, substr(name,1,nchar(name)-1))
 
 names(match1) = newNames1
 names(match2) = newNames2
 
-matchGlobal = rbind(match1,match2)
+#Adding day and season
+match1$day = matchDF$day
+match1$season = matchDF$season
+match2$day = matchDF$day
+match2$season = matchDF$season
 
-# Format posesion
-#matchGlobal['posesion'] = gsub("%","", matchGlobal['posesion'])
-m#atchGlobal['posesion'] = gsub(",",".", matchGlobal['posesion'])
+#Joining together
+match = rbind(match1, match2)
+
+############# Accumulated statistics until the day #################
+source('data_cleaning.R')
+match$day = TransformDayToNumbers(match$day)
+match$posesion = TransformPercentageToNumber(match$posesion)
+
+AcumulatedUntilDate <- function (season, day, team){
+  aux = match[, match$season==season & match$day <= day & match$team == team]
+  aux = sqldf('select sum(*) from aux')
+}
