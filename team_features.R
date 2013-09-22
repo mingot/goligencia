@@ -13,13 +13,14 @@ for(name in names(matchDF))
     selectedVariables2 = c(selectedVariables2, name)
   }
 
+match1 = matchDF[, c(selectedVariables1, "day", "season")]
 match1 = matchDF[, selectedVariables1]
 match2 = matchDF[, selectedVariables2]
 
 newNames1 = c()
 for(name in names(match1))
   newNames1 = c(newNames1, substr(name,1,nchar(name)-1))
-  
+
 newNames2 = c()
 for(name in names(match2))
   newNames2 = c(newNames2, substr(name,1,nchar(name)-1))
