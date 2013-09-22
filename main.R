@@ -5,6 +5,7 @@ source('classification_normalization.R')
 source('join_tables.R')
 source('cross_validation.R')
 source('feature_creation.R')
+source('vowpal_wabbit.R')
 
 classificationDF = read.csv("data/classification.csv", header = TRUE, sep=',', fileEncoding = "UTF-8")
 matchDF = read.csv("data/match.csv", header=TRUE, sep=',',fileEncoding = "UTF-8")
@@ -25,6 +26,8 @@ classificationDF = NormalizeClassification(classificationDF)
 tablon = JoinTables(classificationDF, matchDF)
 tablon = FeaturesTaula(tablon)
 # Extract match features
+
+ExportToVowpal(tablon,predictVariable="result")
 
 # Train and cross validate
 TrainCrossValidation(5, tablon, 'result')
